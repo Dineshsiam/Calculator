@@ -1,0 +1,13 @@
+
+
+.containor {
+    justify-content: center;
+    height:200px;
+    width:500px;
+    color:red;
+}
+
+.calculator {
+    height: 100px;
+    width: 200px;
+}
