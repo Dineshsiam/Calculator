@@ -1,17 +1,20 @@
+
 const display = document.getElementById("display");
 console.log("it~working")
 
-function append(a){
-    display.value += a;
+function append(input){
+    display.value += input;
+
+}function cleartext(){
+
+    display.value = "";
 
 }
 
 
-function cleartext(){
-    display.value = " ";
-
+function deletelast(){
+    
 }
-
 function calculate(){
     display.value = eval(display.value);
 

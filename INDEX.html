@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="function" href="functionality.js">
-    
     <title>simpleCalculator</title> 
 
     
@@ -15,7 +13,7 @@
         <div class="calculator" >
             <div>
             <input id="display" type="text" placeholder="0000" >
-             </div>
+            </div>
             <div>
                 <button onclick="cleartext()">AC</button>
                 <button onclick="deletelast()">del</button>
@@ -38,7 +36,7 @@
                 <button onclick="append('1')">1</button>
                 <button onclick="append('2')">2</button>
                 <button onclick="append('3')">3</button>
-                <button onclick="append('8+')">+</button>
+                <button onclick="append('+')">+</button>
             </div>
             <div>
                 <button onclick="append('0')">0</button>
@@ -48,28 +46,7 @@
             </div>
         </div>
     </div>
-    
-    <script>
-        const display = document.getElementById("display");
-        console.log("it~working")
 
-        function append(input){
-            display.value += input;
-
-        }function cleartext(){
-
-            display.value = "";
-
-        }
-
-
-        function deletelast(){
-            
-        }
-        function calculate(){
-            display.value = eval(display.value);
-
-        }
-    </script>
+    <script src="functionality.js"></script>
 </body>
 </html>
