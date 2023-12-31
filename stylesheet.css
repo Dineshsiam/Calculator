@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:rgb(107, 255, 255);
+    background-color:rgba(11, 255, 255, 0.947);
 }
 
 .calculator {
@@ -34,8 +34,15 @@ button{
     font-size: 20px;
     background: transparent;
     color: white;
+}
 
+button:hover{
+    background-color: rgb(16, 5, 1,0.5);
 
+}
+
+button:active{
+    background-color: rgba(233, 84, 47, 0.733);
 }
 
 .display{
@@ -51,6 +58,7 @@ input{
     flex: 0;
     font-size: 25px;
     border-radius: 5px;
+    padding: 10px;
 }
 
 #button-equal {

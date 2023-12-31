@@ -4,46 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="function" href="functionality.js">
+    
     <title>simpleCalculator</title> 
+
     
 </head>
 <body>
     <div class="containor" >
         <div class="calculator" >
-            <div class="display">
-            <input type="text" placeholder="0000" >
+            <div>
+            <input id="display" type="text" placeholder="0000" >
              </div>
             <div>
-                <button id="button-ac">AC</button>
-                <button>del</button>
-                <button>%</button>
-                <button>/</button>
+                <button onclick="cleartext()">AC</button>
+                <button onclick="deletelast()">del</button>
+                <button onclick="append('%')">%</button>
+                <button onclick="append('/')">/</button>
             </div>
             <div>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>*</button>
+                <button onclick="append('7')">7</button>
+                <button onclick="append('8')">8</button>
+                <button onclick="append('9')">9</button>
+                <button onclick="append('*')">*</button>
             </div>
             <div>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>-</button>
+                <button onclick="append('4')">4</button>
+                <button onclick="append('5')">5</button>
+                <button onclick="append('6')">6</button>
+                <button onclick="append('-')">-</button>
             </div>
             <div>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>+</button>
+                <button onclick="append('1')">1</button>
+                <button onclick="append('2')">2</button>
+                <button onclick="append('3')">3</button>
+                <button onclick="append('8+')">+</button>
             </div>
             <div>
-                <button>0</button>
-                <button>.</button>
-                <button id="button-equal">=</button>
+                <button onclick="append('0')">0</button>
+                <button onclick="append('.')">.</button>
+                <button id="button-equal" onclick="calculate()">=</button>
                 
             </div>
         </div>
-    </div> 
+    </div>
+    
+    <script>
+        const display = document.getElementById("display");
+        console.log("it~working")
+
+        function append(input){
+            display.value += input;
+
+        }function cleartext(){
+
+            display.value = "";
+
+        }
+
+
+        function deletelast(){
+            
+        }
+        function calculate(){
+            display.value = eval(display.value);
+
+        }
+    </script>
 </body>
 </html>
