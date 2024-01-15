@@ -13,9 +13,10 @@ function append(input){
 
 
 function deletelast(){
-    
+    display.value -=input;
 }
+
 function calculate(){
-    display.value = eval(display.value);
+    display.value = eval(display.value);    
 
 }
